@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic
+pydantic-settings
+python-dotenv
+
+requests
+
+neo4j
+psycopg2-binary
+pgvector
+
+sentence-transformers
+
+langgraph
+langchain
