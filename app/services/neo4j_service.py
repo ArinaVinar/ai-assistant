@@ -65,13 +65,5 @@ class Neo4jService:
             for item in results
         ]
 
-    def get_route_to_element(self, query: str) -> list[str]:
-        results = self.search_elements_semantic(query, top_k=1)
-
-        if not results:
-            return []
-
-        return results[0].get("route") or []
-
 
 neo4j_service = Neo4jService()
