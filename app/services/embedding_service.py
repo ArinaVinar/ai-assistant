@@ -13,12 +13,4 @@ class EmbeddingService:
         )
         return [float(x) for x in vector]
 
-    def embed_documents(self, texts: list[str]) -> list[list[float]]:
-        vectors = self.model.encode(
-            texts,
-            normalize_embeddings=True
-        )
-        return [[float(x) for x in vector] for vector in vectors]
-
-
 embedding_service = EmbeddingService()
