@@ -1,4 +1,5 @@
 from langgraph.graph import StateGraph, END
+from IPython.display import Image
 
 from app.config import settings
 from app.graph.state import AgentState
@@ -136,3 +137,6 @@ def build_workflow():
 
 
 navigator_workflow = build_workflow()
+#для отрисовки графа
+# with open("graph.png", "wb") as f:
+#     f.write(navigator_workflow.get_graph().draw_mermaid_png())

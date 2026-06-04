@@ -3,9 +3,8 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-.Python
 
-# Virtual environments
+# Virtual environment
 .venv/
 venv/
 env/
@@ -13,17 +12,13 @@ env/
 # PyCharm
 .idea/
 
-# Environment variables
+# Environment
 .env
 
 # Logs
 *.log
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# Databases
+# Local databases
 *.db
 *.sqlite
 *.sqlite3
@@ -33,8 +28,17 @@ Thumbs.db
 *.xlsx
 *.jsonl
 
-# Model/cache files
+# Cache
 .cache/
-models/
-sentence_transformers/
-huggingface/
+.pytest_cache/
+.mypy_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+app/graph/graph.png
+debug.py
+test_neo.py
+test_ollama.py
+test_postgre.py

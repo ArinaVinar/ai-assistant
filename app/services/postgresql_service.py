@@ -21,9 +21,6 @@ class PostgresService:
         return connection
 
     def search_geology_blocks(self, query: str, top_k: int | None = None) -> list[dict]:
-        """
-        Семантический поиск по геологическим знаниям в PostgreSQL.
-        """
 
         top_k = top_k or settings.postgres_top_k
         query_embedding = embedding_service.embed_query(query)

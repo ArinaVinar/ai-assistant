@@ -15,15 +15,6 @@ class Neo4jService:
         self.driver.close()
 
     def search_elements_semantic(self, query: str, top_k: int | None = None) -> list[dict]:
-        """
-        Семантический поиск по структуре ПК «Навигатор» в Neo4j.
-
-        Шаги:
-        1. Запрос пользователя переводится в embedding.
-        2. Neo4j через vector index ищет ближайшие по смыслу узлы.
-        3. Для каждого найденного узла строится маршрут по связям:
-           HAS_CHILD, INCLUDE, HAS_ADD_INFO.
-        """
 
         top_k = top_k or settings.neo4j_top_k
         query_embedding = embedding_service.embed_query(query)

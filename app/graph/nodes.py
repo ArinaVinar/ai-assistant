@@ -291,7 +291,7 @@ def answer_verification_node(state: AgentState) -> AgentState:
     result = ollama_service.generate_json(prompt, temperature=0.0)
 
     confidence = result.get("confidence", 0.0)
-    need_retry = result.get("need_retry", True)
+    need_retry = result.get("need_retry", False)
     comment = result.get("comment", "")
 
     try:
